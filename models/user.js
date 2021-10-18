@@ -1,7 +1,7 @@
-const mongoose = require('momgoose');
-const { string, number } = require('prop-types');
+const mongoose = require('mongoose');
+//const { string, number } = require('prop-types');
 
-const userSchema = mongoose.userSchema({
+const userSchema = mongoose.Schema({
     nickname:{
         type:String,
         maxlength: 20,
@@ -21,4 +21,4 @@ const userSchema = mongoose.userSchema({
 
 const User = mongoose.model('User',userSchema)
 
-module.exports = {user}// 모듈을 다른 곳에서도 쓸 수 있음
+module.exports = {User}// 모듈을 다른 곳에서도 쓸 수 있음
